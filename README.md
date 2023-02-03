@@ -1,2 +1,13 @@
 # bookstore-api
 Group 26 - Bookstore API
+
+How to download project from GitHub
+1.	Make sure to have JDK 17 installed
+2.	Download GitHub Desktop
+3.	In GitHub Desktop, select “Clone repository from Internet” (or File -> Clone repository)
+4.	In the cloning window, select the URL tab
+5.	Use https://github.com/msmithfl/bookstore-api.git as the Repository URL
+6.	Create a folder somewhere on your computer and choose it as the Local Path (don’t move this folder after creating of you’ll need to relocate the path)
+7.	In IntelliJ, open the bookstore folder, located inside of the bookstore-api folder
+8.	**If there is an error inside IntelliJ, make sure to set the project SDK to Java 17 (there should be a blue banner up top warning you about this)
+
