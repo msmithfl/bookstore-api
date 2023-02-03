@@ -13,7 +13,7 @@ How to download project from GitHub
 
 
 How to connect MongoDB
-1.	Locate Cluster0 in the BookstoreAPI database
+1.	In MongoDB Atlas, locate Cluster0 in the BookstoreAPI database
 2.	Click ‘Connect’
 3.	Choose ‘Connect using MongoDB Compass’
 4.	Download MongoDB Compass
