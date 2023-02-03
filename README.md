@@ -23,4 +23,4 @@ How to connect MongoDB
 
 Spring Boot Project Settings
 ![Spring_Boot_Setup](https://user-images.githubusercontent.com/67169935/216692380-e94abdda-c918-48aa-8b74-222578ffa01a.png)
--project was set up according to the freeCodeCamp tutorial: https://www.youtube.com/watch?v=5PdEmeopJVQ&list=PLqlMvInMNEzC80eAryVLuwYAtHNnmHiep&index=5&t=1790s
+-project was set up according to the freeCodeCamp tutorial: https://www.youtube.com/watch?v=5PdEmeopJVQ&list=PLqlMvInMNEzC80eAryVLuwYAtHNnmHiep&index=6&t=1790s
