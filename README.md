@@ -11,3 +11,12 @@ How to download project from GitHub
 7.	In IntelliJ, open the bookstore folder, located inside of the bookstore-api folder
 8.	**If there is an error inside IntelliJ, make sure to set the project SDK to Java 17 (there should be a blue banner up top warning you about this)
 
+
+How to connect MongoDB
+1.	Locate Cluster0 in the BookstoreAPI database
+2.	Click ‘Connect’
+3.	Choose ‘Connect using MongoDB Compass’
+4.	Download MongoDB Compass
+5.	In MongoDB Compass, create a new connection
+6.	Paste mongodb+srv://group26:vd35L5HdMZx4V0v9@cluster0.ucm1yc8.mongodb.net/test in the URI section
+7.	Click ‘Save and Connect’
