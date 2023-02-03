@@ -20,3 +20,6 @@ How to connect MongoDB
 5.	In MongoDB Compass, create a new connection
 6.	Paste mongodb+srv://group26:vd35L5HdMZx4V0v9@cluster0.ucm1yc8.mongodb.net/test in the URI section
 7.	Click ‘Save and Connect’
+
+Spring Boot Project Settings
+![Spring_Boot_Setup](https://user-images.githubusercontent.com/67169935/216692380-e94abdda-c918-48aa-8b74-222578ffa01a.png)
