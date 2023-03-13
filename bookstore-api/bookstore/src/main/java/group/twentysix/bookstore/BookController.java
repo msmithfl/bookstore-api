@@ -27,5 +27,4 @@ public class BookController {
     public ResponseEntity<Optional<Book>> getSingleBook(@PathVariable String isbn) {
         return new ResponseEntity<Optional<Book>>(bookService.singleBook(isbn), HttpStatus.OK);
     }
-
 }
