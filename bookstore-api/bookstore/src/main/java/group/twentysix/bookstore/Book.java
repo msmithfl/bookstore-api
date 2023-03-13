@@ -26,5 +26,5 @@ public class Book {
     private String description;
     private int amountSold;
     private double rating;
-    private int isbn;
+    private String isbn;
 }
