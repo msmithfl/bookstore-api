@@ -17,7 +17,7 @@ public class Book {
     @Id
     private ObjectId id;
     private String title;
-    private List<String> genre;
+    private List<String> genres;
     private double price;
     private String author;
     private String publisher;
