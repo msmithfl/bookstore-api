@@ -1,6 +1,5 @@
 package group.twentysix.bookstore;
 
-import org.bson.types.ObjectId;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -11,6 +10,7 @@ import java.util.Optional;
 public class BookService {
     @Autowired
     private BookRepository bookRepository;
+
     public List<Book> allBooks() {
         return bookRepository.findAll();
     }
@@ -18,5 +18,4 @@ public class BookService {
     public Optional<Book> singleBook(String isbn) {
         return bookRepository.findBookByIsbn(isbn);
     }
-
 }
