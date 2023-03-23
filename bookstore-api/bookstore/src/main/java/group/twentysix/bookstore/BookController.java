@@ -13,8 +13,16 @@ public class BookController {
     @Autowired
     private BookService bookService;
 
+    @Autowired
+    private BookRepository bookRepository;
+
     @GetMapping
     public ResponseEntity<List<Book>> getAllBooks() {
         return new ResponseEntity<List<Book>>(bookService.allBooks(), HttpStatus.OK);
+    }
+
+    @GetMapping("/{publisher}")
+    public ResponseEntity<List<Book>> getBooksByPublisher(@PathVariable String publisher) {
+        return new ResponseEntity<List<Book>>(bookRepository.findByPublisher(publisher), HttpStatus.OK);
     }
 }
