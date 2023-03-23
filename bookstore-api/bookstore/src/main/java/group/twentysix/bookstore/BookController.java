@@ -30,4 +30,9 @@ public class BookController {
     public ResponseEntity<List<Book>> getTopSellers() {
         return new ResponseEntity<List<Book>>(bookRepository.findTop5ByOrderByAmountSoldDesc(), HttpStatus.OK);
     }
+
+    @GetMapping("/rating")
+    public ResponseEntity<List<Book>> getBooksByRating(@RequestParam("rating") double rating) {
+        return new ResponseEntity<List<Book>>(bookRepository.findByRatingGreaterThanEqual(rating), HttpStatus.OK);
+    }
 }
