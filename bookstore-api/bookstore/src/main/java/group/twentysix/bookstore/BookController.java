@@ -25,4 +25,9 @@ public class BookController {
     public ResponseEntity<List<Book>> getBooksByPublisher(@PathVariable String publisher) {
         return new ResponseEntity<List<Book>>(bookRepository.findByPublisher(publisher), HttpStatus.OK);
     }
+
+    @GetMapping("/top-sellers")
+    public ResponseEntity<List<Book>> getTopSellers() {
+        return new ResponseEntity<List<Book>>(bookRepository.findTop5ByOrderByAmountSoldDesc(), HttpStatus.OK);
+    }
 }

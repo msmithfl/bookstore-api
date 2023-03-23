@@ -10,4 +10,6 @@ import java.util.List;
 public interface BookRepository extends MongoRepository<Book, ObjectId> {
 
     List<Book> findByPublisher(String publisher);
+
+    List<Book> findTop5ByOrderByAmountSoldDesc();
 }
