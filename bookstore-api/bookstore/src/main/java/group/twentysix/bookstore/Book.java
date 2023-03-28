@@ -19,7 +19,7 @@ public class Book {
     private String title;
     private List<String> genres;
     private double price;
-    private String author;
+    private Author author;
     private String publisher;
     private int yearPublished;
     private List<String> comments;
