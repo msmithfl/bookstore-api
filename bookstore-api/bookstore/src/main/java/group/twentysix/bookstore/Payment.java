@@ -15,16 +15,11 @@ public class Payment {
     @Id
     private ObjectId id;
 
-    private String cardNumber;
+    private String cardDetails;
 
-    private String cardDate;
 
-    private String cv;
-
-    private String zipcode;
-
-    public Payment(String cardNumber) {
-        this.cardNumber = cardNumber;
+    public Payment(String cardDetails) {
+        this.cardDetails = cardDetails;
     }
 
 }

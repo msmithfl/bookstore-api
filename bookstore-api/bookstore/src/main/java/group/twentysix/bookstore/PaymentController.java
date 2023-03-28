@@ -18,6 +18,7 @@ public class PaymentController {
 
     @PostMapping
     public ResponseEntity<Payment> createPayment(@RequestBody Map<String, String> payload) {
-        return new ResponseEntity<Payment>(paymentService.createPayment(payload.get("cardNumber"), payload.get("username")), HttpStatus.CREATED);
+       return new ResponseEntity<Payment>(paymentService.createPayment(payload.get("cardDetails"), payload.get("username")), HttpStatus.CREATED);
     }
+
 }

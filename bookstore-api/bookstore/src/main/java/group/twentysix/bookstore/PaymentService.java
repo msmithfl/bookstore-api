@@ -12,15 +12,16 @@ public class PaymentService {
     private PaymentRepository paymentRepository;
 @Autowired
     private MongoTemplate mongoTemplate;
-    public Payment createPayment(String cardNumber, String username) {
-        Payment payment =   paymentRepository.insert(new Payment(cardNumber));
+    public Payment createPayment(String cardDetails, String username) {
+        Payment payment =   paymentRepository.insert(new Payment(cardDetails));
+
 
 
         mongoTemplate.update(User.class)
-                .matching(Criteria.where("username").is(username))
+               .matching(Criteria.where("username").is(username))
                 .apply(new Update().push("paymentIds").value(payment))
-                .first();
+               .first();
 
-        return payment;
+       return payment;
     }
 }
