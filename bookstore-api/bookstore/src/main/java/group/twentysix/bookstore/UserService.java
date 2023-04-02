@@ -26,10 +26,9 @@ public class UserService {
         return userRepository.findUserByUsername(username);
     }
 
-    public User addUser(User newUser) {
 
-        newUser.setUsername("Hurston");
-        return newUser;
+    public User save (User newUser){
+        return userRepository.save(newUser);
     }
 
     public User updateUser(String username, User userRequest) {

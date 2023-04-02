@@ -1,11 +1,12 @@
 package group.twentysix.bookstore;
 
-import org.bson.types.ObjectId;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.stereotype.Service;
+
 import org.springframework.web.bind.annotation.*;
+
 
 import java.util.List;
 import java.util.Map;
@@ -25,11 +26,14 @@ public class UserController {
     public ResponseEntity<Optional<User>> getSingleUser(@PathVariable String username) {
         return new ResponseEntity<Optional<User>>(userService.singleUser(username), HttpStatus.OK);
     }
-@PostMapping("/user/add")
-@ResponseStatus(HttpStatus.CREATED)
-    public User addUser (@RequestBody User newUser) {
-        return userService.addUser(newUser);
-
+@PostMapping("/add")
+    public ResponseEntity<User> create(@RequestBody User newUser) {
+        User user = userService.save(newUser);
+        if (user == null) {
+            throw new RuntimeException();
+        } else {
+            return new ResponseEntity<>(user, HttpStatus.CREATED);
+        }
     }
 @PutMapping("/{username}")
     public User updateUser (@PathVariable String username,@RequestBody User userRequest) {
