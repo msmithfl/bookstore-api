@@ -19,8 +19,7 @@ public class Book {
     private ObjectId id;
     private String title;
     private double price;
-    @DocumentReference
-    private Author author;
+    private String author;
     private String publisher;
     private int yearPublished;
     private List<String> comments;
