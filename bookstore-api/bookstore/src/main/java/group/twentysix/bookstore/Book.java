@@ -6,6 +6,7 @@ import lombok.NoArgsConstructor;
 import org.bson.types.ObjectId;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
+import org.springframework.data.mongodb.core.mapping.DocumentReference;
 
 import java.util.List;
 
@@ -17,8 +18,8 @@ public class Book {
     @Id
     private ObjectId id;
     private String title;
-    private List<String> genres;
     private double price;
+    @DocumentReference
     private Author author;
     private String publisher;
     private int yearPublished;
@@ -27,5 +28,6 @@ public class Book {
     private int amountSold;
     private double rating;
     private String isbn;
+    private List<String> genres;
 
 }
