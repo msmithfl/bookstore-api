@@ -14,7 +14,8 @@ public class BookService {
     private AuthorRepository authorRepository;
     @Autowired
     private BookRepository bookRepository;
-    public List<Book> allBooks(){
+
+    public List<Book> allBooks() {
         return bookRepository.findAll();
 
     }
