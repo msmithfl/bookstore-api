@@ -9,17 +9,17 @@ import java.util.List;
 public class CartService  {
 
     private CartRepository cartRepository;
-    private CartRequestToCart cartRequestToCart;
+    private CartConverter cartConverter;
 
     @Autowired
-    public CartService(CartRepository cartRepository, CartRequestToCart cartRequestToCart) {
+    public CartService(CartRepository cartRepository, CartConverter cartConverter) {
         this.cartRepository = cartRepository;
-        this.cartRequestToCart = cartRequestToCart;
+        this.cartConverter = cartConverter;
     }
 
     
     public synchronized Cart saveOrUpdate(CartRequest cartRequest) {
-        return cartRepository.save(cartRequestToCart.convert(cartRequest));
+        return cartRepository.save(cartConverter.convert(cartRequest));
     }
 
     public synchronized Cart findCartByCustomerId(CartRequest cartRequest) {

@@ -6,7 +6,7 @@ import org.springframework.stereotype.Component;
 import org.springframework.util.StringUtils;
 
 @Component
-public class CartRequestToCart implements Converter<CartRequest, Cart> {
+public class CartConverter implements Converter<CartRequest, Cart> {
 
     @Override
     public Cart convert(CartRequest cartRequest) {

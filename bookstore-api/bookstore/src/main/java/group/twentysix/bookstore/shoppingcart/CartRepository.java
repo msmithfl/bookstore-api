@@ -7,4 +7,5 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface CartRepository extends MongoRepository<Cart, String> {
     Cart findCartByCustomerId(String customerId);
+    Cart void removeByBook(Object book);
 }

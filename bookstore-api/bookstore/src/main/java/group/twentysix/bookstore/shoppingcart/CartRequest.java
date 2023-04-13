@@ -17,6 +17,9 @@ import java.io.Serializable;
 public class CartRequest implements Serializable {
 	@Id
 private String id;
+	private String customerId;
+
+    private List<Book> books;
 
     public String getId() {
 		return id;
@@ -42,7 +45,4 @@ private String id;
 		this.books = books;
 	}
 
-	private String customerId;
-
-    private List<Book> books;
 }
