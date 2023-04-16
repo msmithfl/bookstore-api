@@ -15,8 +15,10 @@ public interface BookRepository extends MongoRepository<Book, ObjectId> {
     // FEATURE 1: GET BOOKS BY GENRE
     List<Book> findByPublisher(String publisher);
 
+    List<Book> findByGenres(String genre);
+
     // FEATURE 2: GET TOP 10 SELLERS
-    List<Book> findTop5ByOrderByAmountSoldDesc();
+    List<Book> findTop10ByOrderByAmountSoldDesc();
 
     // FEATURE 3: GET BOOKS BY RATING
     List<Book> findByRatingGreaterThanEqual(double rating);
